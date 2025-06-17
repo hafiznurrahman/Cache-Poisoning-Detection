@@ -1,0 +1,39 @@
+{
+    "information": {
+        "total_domain": 0,
+        "total_path": 0,
+        "total_vulnerable_status": 0,
+        "total_potential_status": 0,
+        "total_none_status": 0
+    },
+    "data": [
+        {
+            "domain": "",
+            "status": {
+                "total_vulnerable": 0,
+                "total_potential": 0,
+                "total_none": 0
+            },
+            "track": [
+                {
+                    "t_status": "",
+                    "t_url": "",
+                    "t_header": [
+                        {
+                            "t_payload": "",
+                            "result": [
+                                {
+                                    "first_response": ""
+                                },
+                                {
+                                    "second_response": "",
+                                    "content": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
