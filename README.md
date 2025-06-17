@@ -1,4 +1,4 @@
-<img src="icon.png"/>
+![cache_poisoning_detection](./assets/icon.png)
 
 # Cache Poisoning Detection
 
@@ -9,3 +9,64 @@
 ![Repo Size](https://img.shields.io/github/repo-size/hafiznurrahman/Cache-Poisoning-Detection)
 ![PRs](https://img.shields.io/github/issues-pr/hafiznurrahman/Cache-Poisoning-Detection)
 ![Stars](https://img.shields.io/github/stars/hafiznurrahman/Cache-Poisoning-Detection?style=social)
+
+**Cache Poisoning Detection** is a semi-automated Python-based tool that focuses on detecting and exploiting cache poisoning vulnerabilities through HTTP header manipulation. This tool automates the process of crawling and sending specially designed headers to identify misconfigured caching behavior, particularly targeting header-based poisoning without keys.
+
+## Features
+
+-   Crawl domains and subdirectories
+-   Run payloads along with cache busters
+-   Output stored in JSON structure
+-   Display results in graphical user interface (GUI)
+
+## Project structure
+
+```bash
+.
+├── LICENSE
+├── README.md
+├── assets
+│   └── icon.png
+├── data
+│   ├── crawling_result.json
+│   └── poisoning_result.json
+├── domains.txt
+├── main.py
+├── modules
+│   ├── __init__.py
+│   ├── config.py
+│   ├── crawler.py
+│   ├── executor.py
+│   └── utils.py
+├── requirements.txt
+└── view
+    ├── index.html
+    └── src
+        ├── main.css
+        └── main.js
+```
+
+## Installation
+
+Copy and paste it into your terminal
+
+```bash
+git clone https://github.com/hafiznurrahman/Cache-Poisoning-Detection.git
+cd Cache-Poisoning-Detection
+pip install -r requirements.txt
+```
+
+## How To Use
+
+1. Enter the domain list into `domains.txt`
+2. Run the `main.py` script
+
+    ```bash
+    python main.py
+    ```
+3. The results are stored in `data/`
+4. Open the `index.html` file in your browser to see the results.
+
+## Licence
+
+This project is licensed under the [MIT License](./LICENSE).
