@@ -12,6 +12,10 @@
 
 **Cache Poisoning Detection** is a semi-automated Python-based tool that focuses on detecting and exploiting cache poisoning vulnerabilities through HTTP header manipulation. This tool automates the process of crawling and sending specially designed headers to identify misconfigured caching behavior, particularly targeting header-based poisoning without keys.
 
+## Development Status
+> 🚧 This tool is under active development.
+Please refer to `TODO.md` for upcoming features and progress tracking.
+
 ## Features
 
 -   Crawl domains and subdirectories
