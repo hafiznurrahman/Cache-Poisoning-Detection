@@ -1,8 +1,11 @@
 # TODO List - Cache Poisoning Detection
 
 ```markdown
-Add `x` to `[ ]` to mark tasks that have been completed.
-Example: [x] Task xxxxxxxxxxx
+Add `x` to `[ ]` to mark a task as completed.
+Example: `[x] Task xxxxxxxxxxx`
+
+Or add `<<<` after the task name to mark a task as in progress.
+Example: `[ ] Task xxxxx <<<`
 ```
 ## 🚀 main.py
 
@@ -25,3 +28,7 @@ Example: [x] Task xxxxxxxxxxx
 ## 💥 executor.py
 
 - [x] Soon...
+
+## 🌐 view/
+
+- [ ] Creating a GUI <<<
