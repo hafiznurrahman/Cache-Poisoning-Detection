@@ -31,4 +31,4 @@ Example: `[ ] Task xxxxx <<<`
 
 ## 🌐 view/
 
-- [ ] Creating a GUI <<<
+- [x] Creating a GUI <<<
