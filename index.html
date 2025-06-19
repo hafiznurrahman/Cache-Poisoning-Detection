@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="src/style.css" />
+        <title>Cache Poisoning Detection</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="domain-tabs"></div>
+            <div class="wrapper-2">
+                <div class="information dark-box">
+                    <div class="info-content">
+                        <span class="content-value green-box"
+                            >COUNT DOMAINS</span
+                        >
+                        <span class="count-domains content-value green-box">
+                        </span>
+                    </div>
+                    <div class="info-content">
+                        <span class="content-value green-box">COUNT URLs</span>
+                        <span class="count-urls content-value green-box">
+                        </span>
+                    </div>
+                    <br />
+                    <div class="info-content">
+                        <span class="content-value red-box"
+                            >COUNT VULNERABLE</span
+                        >
+                        <span class="count-vulnerable content-value red-box">
+                        </span>
+                    </div>
+                    <div class="info-content">
+                        <span class="content-value orange-box"
+                            >COUNT POTENTIAL</span
+                        >
+                        <span class="count-potential content-value orange-box">
+                        </span>
+                    </div>
+                    <div class="info-content">
+                        <span class="content-value blue-box">COUNT NONE</span>
+                        <span class="count-none content-value blue-box"> </span>
+                    </div>
+                    <br />
+                    <div class="info-content">
+                        <span class="content-value white-box">INFO DOMAIN</span>
+                        <span class="info-domain content-value white-box">
+                        </span>
+                    </div>
+                    <div class="info-content">
+                        <span class="content-value white-box"
+                            >INFO ENDPOINT</span
+                        >
+                        <span class="info-endpoint content-value white-box">
+                        </span>
+                    </div>
+                    <div class="info-content">
+                        <span class="content-value white-box"
+                            >INFO PAYLOAD</span
+                        >
+                        <span class="info-payload content-value white-box">
+                        </span>
+                    </div>
+                </div>
+                <pre class="response-body-output dark-box"></pre>
+            </div>
+            <div class="wrapper-3">
+                <div class="url-tabs"></div>
+                <div class="header-tabs"></div>
+            </div>
+            <div class="wrapper-4">
+                <pre class="response-header-initial dark-box"></pre>
+                <pre class="response-header-final dark-box"></pre>
+            </div>
+        </div>
+        <div class="warning">
+            <span>Landscape mode only</span>
+        </div>
+        <script src="src/script.js"></script>
+    </body>
+</html>
