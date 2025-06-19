@@ -26,8 +26,7 @@ build/
 dist/
 
 # Ignore result data & input list
-data/crawling_result.json
-data/poisoning_result.json
+data/
 domains.txt
 
 # Keep folder structure
