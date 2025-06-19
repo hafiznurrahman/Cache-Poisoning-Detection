@@ -29,25 +29,24 @@ Please refer to `TODO.md` for upcoming features and progress tracking.
 .
 ├── LICENSE
 ├── README.md
+├── TODO.md
 ├── assets
 │   └── icon.png
 ├── data
 │   ├── crawling_result.json
 │   └── poisoning_result.json
 ├── domains.txt
+├── index.html
 ├── main.py
 ├── modules
-│   ├── __init__.py
 │   ├── config.py
 │   ├── crawler.py
 │   ├── executor.py
 │   └── utils.py
 ├── requirements.txt
-└── view
-    ├── index.html
-    └── src
-        ├── main.css
-        └── main.js
+└── src
+    ├── script.js
+    └── style.css
 ```
 
 ## Installation
@@ -66,7 +65,7 @@ pip install -r requirements.txt
 2. Run the `main.py` script
 
     ```bash
-    python main.py
+    python3 main.py
     ```
 3. The results are stored in `data/`
 4. Open the `index.html` file in your browser to see the results.
