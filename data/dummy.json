@@ -1,0 +1,130 @@
+{
+    "data": [
+        {
+            "domain_name": "domain1",
+            "endpoints": [
+                {
+                    "url": "http://domain1.com/path?jsj=hs",
+                    "payload_tests": [
+                        {
+                            "status": "V",
+                            "payload": "X-Forwarded-For: evil.com",
+                            "result": {
+                                "original_response": {
+                                    "header": "heahdder"
+                                },
+                                "modified_response": {
+                                    "header": "headegdhdr",
+                                    "content": "htmhdhdl"
+                                }
+                            }
+                        },
+                        {
+                            "status": "P",
+                            "payload": "X-Forwarded-For: evil.com",
+                            "result": {
+                                "original_response": {
+                                    "header": "heahdder"
+                                },
+                                "modified_response": {
+                                    "header": "headegdhdr",
+                                    "content": "htmhdhdl"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "url": "http://domain1.com/path?jsj=hsjj",
+                    "payload_tests": [
+                        {
+                            "status": "P",
+                            "payload": "X-Forwarded-For: evillll.com",
+                            "result": {
+                                "original_response": {
+                                    "header": "headhdder"
+                                },
+                                "modified_response": {
+                                    "header": "headbder",
+                                    "content": "hthdml"
+                                }
+                            }
+                        },
+                        {
+                            "status": "N",
+                            "payload": "X-Forwarded-For: evillll.cooom",
+                            "result": {
+                                "original_response": {
+                                    "header": "header"
+                                },
+                                "modified_response": {
+                                    "header": "header",
+                                    "content": "html"
+                                }
+                            }
+                        },
+                        {
+                            "status": "V",
+                            "payload": "X-Forwarded-For: evillll.commmm",
+                            "result": {
+                                "original_response": {
+                                    "header": "header"
+                                },
+                                "modified_response": {
+                                    "header": "header",
+                                    "content": "html"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "domain_name": "domain2",
+            "endpoints": [
+                {
+                    "url": "http://domain2.com/path",
+                    "payload_tests": [
+                        {
+                            "status": "P",
+                            "payload": "X-Forwarded-Host: evil.com",
+                            "result": {
+                                "original_response": {
+                                    "header": "header"
+                                },
+                                "modified_response": {
+                                    "header": "header",
+                                    "content": "html"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "domain_name": "domain3",
+            "endpoints": [
+                {
+                    "url": "http://domain3.com/?cb=zz",
+                    "payload_tests": [
+                        {
+                            "status": "N",
+                            "payload": "X-Host: evil.com",
+                            "result": {
+                                "original_response": {
+                                    "header": "header"
+                                },
+                                "modified_response": {
+                                    "header": "header",
+                                    "content": "html"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
