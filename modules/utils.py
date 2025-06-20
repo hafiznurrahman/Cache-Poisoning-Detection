@@ -53,7 +53,6 @@ def filter_path(path: str) -> str:
     if not path.startswith(('http','https','/')):
         path = '/' + path
 
-    path = path.encode('utf-8').decode('utf-8')
     return path
 
 # track domain
