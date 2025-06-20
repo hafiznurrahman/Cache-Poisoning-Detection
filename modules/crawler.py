@@ -14,9 +14,7 @@ from modules.config import SAVE_CRAWLING_TO
 
 #ptxt = template print text
 #prdr = template print text for redirect
-def crawler(crawling_urls, visited=None):
-    if visited is None:
-        visited = set()
+def crawler(crawling_urls):
     # try block
     try:
         PATH_CRAWLING_RESULT = f"{SAVE_RESULTS_TO}/{SAVE_CRAWLING_TO}"
@@ -28,18 +26,7 @@ def crawler(crawling_urls, visited=None):
         # track redirect
         if response.history:
             prdr(color1, crawling_urls, final_url)
-        
-        # Check if the domain already exists
-        if is_domain_tracked(original_domain, PATH_CRAWLING_RESULT):
-            ptxt(color1, "FOUND1", f"Domain '{color1}{current_domain}{RESET}' already crawled.")
-            return
             
-        # Check if the redirect domain already exists
-        if urlparse(crawling_urls).netloc != current_domain:
-            if is_domain_tracked(current_domain, PATH_CRAWLING_RESULT):
-                ptxt(color1, "FOUND2", f"Domain '{color1}{current_domain}{RESET}' already crawled.")
-                return
-
         print() # new line
         
         # extract url
@@ -82,11 +69,8 @@ def crawler(crawling_urls, visited=None):
                     updated_result = [{"domain": d, "data": sorted(domain_map[d])} for d in sorted(domain_map)]
                 
                     # save to file
-                    with open(PATH_CRAWLING_RESULT, 'w') as f:
-                        json.dump(updated_result, f, indent=4)
-
-                    if urlparse(absolute_path).netloc == current_domain:
-                        crawler(absolute_path, visited)
+                    with open(PATH_CRAWLING_RESULT, 'w', encoding='utf-8') as f:
+                        json.dump(updated_result, f, ensure_ascii=False, indent=4)
 
     # error block
     except Exception as err:
